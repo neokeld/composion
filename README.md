@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="140" height="77" src="https://raw.githubusercontent.com/neokeld/composion/main/logo.png" alt='composion'>
+</p>
+
 # Composion
 
 A component library made with [React](https://reactjs.org) and [Emotion](https://emotion.sh).
@@ -12,9 +16,13 @@ I believe that a good library is a library that is **simple to teach**. But Flex
 
 ## Run examples
 
+```shell
+yarn install
 yarn start-storybook
+```
 
 ## Inspirations
 
 <https://github.com/grommet/grommet>
+
 <https://github.com/ooade/component-library/tree/final>
