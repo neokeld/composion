@@ -1,34 +1,50 @@
-import fs from 'fs';
-import babel from 'rollup-plugin-babel';
-import { terser } from 'rollup-plugin-terser';
-import commonjs from '@rollup/plugin-commonjs';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
+import babel from "@rollup/plugin-babel";
+import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
+import external from "rollup-plugin-peer-deps-external";
+import { terser } from "rollup-plugin-terser";
+import packageJSON from "./package.json";
 
-const pkg = JSON.parse(
-  fs.readFileSync('./package.json', { encoding: 'utf-8' })
-);
+const input = "./components";
+const minifyExtension = pathToFile => pathToFile.replace(/\.js$/, ".min.js");
 
-export default {
-  input: 'components',
-  external: ['react', '@emotion/core', '@emotion/styled'],
-  plugins: [
-    babel({
-      exclude: 'node_modules/**',
-    }),
-    commonjs(),
-    nodeResolve({ browser: true }),
-    terser(),
-  ],
-  output: [
-    {
-      file: pkg.main,
-      format: 'cjs',
+export default [
+  // ES
+  {
+    input,
+    output: {
+      file: packageJSON.module,
+      format: "es",
       sourcemap: true,
+      exports: "named"
     },
-    {
-      file: pkg.module,
-      format: 'es',
+    plugins: [
+      babel({
+        babelHelpers: 'bundled',
+        exclude: "node_modules/**",
+      }),
+      external(),
+      resolve(),
+      commonjs()
+    ]
+  },
+  {
+    input,
+    output: {
+      file: minifyExtension(packageJSON.module),
+      format: "es",
       sourcemap: true,
+      exports: "named"
     },
-  ],
-};
+    plugins: [
+      babel({
+        babelHelpers: 'bundled',
+        exclude: "node_modules/**",
+      }),
+      external(),
+      resolve(),
+      commonjs(),
+      terser()
+    ]
+  }
+];
