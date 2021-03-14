@@ -1,6 +1,6 @@
 {
   "name": "composion",
-  "version": "0.2.13",
+  "version": "0.2.15",
   "description": "Component Library",
   "main": "dist/composion.js",
   "module": "dist/composion.es.js",
