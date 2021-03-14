@@ -26,7 +26,7 @@ const alignItems = ({ align = 'left' }) => alignMap[align];
 const direction = ({ direction = 'column' }) => directionMap[direction];
 const grow = ({ grow }) => (grow ? 1 : 0);
 const justifyContent = ({ justify = 'left' }) => justifyMap[justify];
-const wrap = ({ wrap }) => (wrap ? 'wrap' : 'no-wrap');
+const wrap = ({ wrap }) => (wrap ? 'wrap' : 'nowrap');
 
 const background = ({background}) => background;
 const basis = ({basis}) => basis;
