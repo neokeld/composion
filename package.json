@@ -1,6 +1,6 @@
 {
   "name": "composion",
-  "version": "0.2.0",
+  "version": "0.2.13",
   "description": "Component Library",
   "main": "dist/composion.js",
   "module": "dist/composion.es.js",
@@ -12,31 +12,42 @@
   "engines": {
     "node": ">=10.0.0"
   },
-  "keywords": ["components", "emotion", "react"],
+  "keywords": [
+    "components",
+    "emotion",
+    "react"
+  ],
   "author": "Arnaud Duforat",
   "license": "MIT",
-  "dependencies": {
-    "polished": "^4.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/preset-env": "^7.13.8",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.13.0",
+    "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.10.4",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
+    "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
-    "@storybook/addon-knobs": "^6.1.20",
-    "@storybook/addons": "^6.1.20",
-    "@storybook/react": "^6.1.20",
-    "@storybook/theming": "^6.1.20",
+    "@storybook/addon-knobs": "^6.1.21",
+    "@storybook/addons": "^6.1.21",
+    "@storybook/react": "^6.1.21",
+    "@storybook/theming": "^6.1.21",
     "babel-loader": "^8.1.0",
     "emotion-theming": "^11.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "rollup": "^2.40.0",
-    "rollup-plugin-babel": "^4.4.0",
+    "rollup": "^2.41.2",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
     "rollup-plugin-terser": "^7.0.0",
     "storybook-addon-jsx": "^7.3.4"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.x",
+    "@emotion/styled": "^11.x",
+    "react": "^17.x",
+    "react-dom": "^17.x"
   },
   "homepage": "https://github.com/neokeld/composion#readme",
   "repository": {
