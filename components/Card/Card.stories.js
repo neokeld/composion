@@ -53,7 +53,7 @@ export const withRow = () => {
         CardBody_height: '168px',
         Card_width: '33.3%'
     };
-    return <Box direction="row" margin="-1%" wrap={true}>
+    return <Box direction="row" margin="-1%" wrap="true">
         <Card
             title={<CardTitleContent theme={baseTheme}>Plop</CardTitleContent>}
             description="Ceci est une description"
@@ -87,7 +87,7 @@ export const combined = () => {
             <span>{nbPeople}</span>
         </div>
     </Box>;
-    return <Box direction="row" margin="-1%" wrap={true}>
+    return <Box direction="row" margin="-1%" wrap="true">
         <CardAnchor href="#" theme={baseTheme}>
             <Card
                 title={<CustomTitle title="Plop 1" nbPeople={2} />}
