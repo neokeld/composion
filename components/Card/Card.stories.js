@@ -2,7 +2,6 @@ import React from 'react';
 
 import decorators from '../../.storybook/utils';
 import { Card, CardAnchor, CardTitleContent } from './Card';
-import { Row } from './Div';
 import { Box } from '../Box';
 
 export default {
@@ -54,7 +53,7 @@ export const withRow = () => {
         CardBody_height: '168px',
         Card_width: '33.3%'
     };
-    return <Row>
+    return <Box direction="row" margin="-1%" wrap={true}>
         <Card
             title={<CardTitleContent theme={baseTheme}>Plop</CardTitleContent>}
             description="Ceci est une description"
@@ -67,7 +66,7 @@ export const withRow = () => {
             title={<CardTitleContent theme={baseTheme}>Plop3</CardTitleContent>}
             description="Dernière description pour terminer"
             theme={baseTheme} />
-    </Row>;
+    </Box>;
 };
 
 export const combined = () => {
@@ -88,7 +87,7 @@ export const combined = () => {
             <span>{nbPeople}</span>
         </div>
     </Box>;
-    return <Row>
+    return <Box direction="row" margin="-1%" wrap={true}>
         <CardAnchor href="#" theme={baseTheme}>
             <Card
                 title={<CustomTitle title="Plop 1" nbPeople={2} />}
@@ -113,5 +112,5 @@ export const combined = () => {
                 description="Description 4"
                 theme={baseTheme} />
         </CardAnchor>
-    </Row>;
+    </Box>;
 };
