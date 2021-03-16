@@ -26,3 +26,7 @@ yarn start-storybook
 <https://github.com/grommet/grommet>
 
 <https://github.com/ooade/component-library/tree/final>
+
+On how to deploy the story book with a Github Action:
+
+<https://github.com/VibeerCo/storybook-action-example>
