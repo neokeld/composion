@@ -10,4 +10,4 @@ jobs:
     - name: Deploy to Github Pages
       run: npm install && npm run deploy -- --ci --host-token-env-variable=VI_NPM_TOKEN
       env:
-        VI_NPM_TOKEN: ${{ secrets.VI_NPM_TOKEN }}
+        VI_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
