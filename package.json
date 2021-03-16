@@ -8,7 +8,7 @@
     "build": "rollup -c",
     "bundle-size": "cat dist/composion.js | gzip | wc -c",
     "storybook": "start-storybook -p 9000 -c .storybook",
-    "deploy": "storybook-to-ghpages"
+    "deploy": "storybook-to-ghpages --source-branch main"
   },
   "engines": {
     "node": ">=10.0.0"
