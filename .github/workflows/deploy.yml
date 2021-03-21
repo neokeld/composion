@@ -9,8 +9,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Deploy to Github Pages
-      run: npm install && npm run deploy -- --ci --host-token-env-variable=VI_NPM_TOKEN
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Build and Deploy
+      uses: neokeld/github-pages-deploy-action@dev
       env:
-        VI_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BASE_BRANCH: "main"
+        BRANCH: "gh-pages"
+        FOLDER: "storybook-static"
+        BUILD_SCRIPT: "yarn install && yarn build-storybook"
