@@ -1,4 +1,4 @@
-name: CI
+name: CD
 
 on:
   push:
@@ -9,13 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Checkout 🛎️
       uses: actions/checkout@v2
-    - name: Build and Deploy
+    - name: Install and Build 🔧
+      run: yarn install && yarn build-storybook
+    - name: Deploy on GitHub Pages 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.0
-      env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BASE_BRANCH: "main"
-        BRANCH: "gh-pages"
-        FOLDER: "storybook-static"
-        BUILD_SCRIPT: "yarn install && yarn build-storybook"
+      with:
+        branch: gh-pages
+        folder: storybook-static
