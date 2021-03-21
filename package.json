@@ -7,8 +7,7 @@
   "scripts": {
     "build": "rollup -c",
     "bundle-size": "cat dist/composion.js | gzip | wc -c",
-    "storybook": "start-storybook -p 9000 -c .storybook",
-    "deploy": "storybook-to-ghpages"
+    "storybook": "start-storybook -p 9000 -c .storybook"
   },
   "engines": {
     "node": ">=10.0.0"
@@ -35,7 +34,6 @@
     "@storybook/addon-knobs": "^6.1.21",
     "@storybook/addons": "^6.1.21",
     "@storybook/react": "^6.1.21",
-    "@storybook/storybook-deployer": "^2.8.7",
     "@storybook/theming": "^6.1.21",
     "babel-loader": "^8.1.0",
     "emotion-theming": "^11.0.0",
