@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="140" height="77" src="https://raw.githubusercontent.com/neokeld/composion/main/logo.png" alt='composion'>
+  <img width="140" height="77" src="https://raw.githubusercontent.com/neokeld/composion/main/images/logo.png" alt='composion'>
 </p>
 
 # Composion
@@ -20,6 +20,10 @@ I believe that a good library is a library that is **simple to teach**. But Flex
 yarn install
 yarn start-storybook
 ```
+
+## Getting Started
+
+[Getting Started >>>](https://neokeld.github.io/composion/index.html?path=/story/components-getting-started--page)
 
 ## Inspirations
 

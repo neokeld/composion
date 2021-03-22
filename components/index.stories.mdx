@@ -1,11 +1,12 @@
 import { Meta } from '@storybook/addon-docs/blocks';
+import CodeBlock from '../.storybook/CodeBlock';
 
 <Meta
   title='Components/Introduction'
 />
 
 <div style={{ margin: '0 auto', textAlign: 'center' }}>
-  <img width="140" height="77" src="https://raw.githubusercontent.com/neokeld/composion/main/logo.png" alt='composion' />
+  <img width="140" height="77" src="https://raw.githubusercontent.com/neokeld/composion/main/images/logo.png" alt='composion' />
 </div>
 
 # Composion
@@ -22,11 +23,24 @@ I believe that a good library is a library that is **simple to teach**. But Flex
 
 ## Run examples
 
-```shell
+<CodeBlock language="bash">
+{`
 yarn install
 yarn start-storybook
-```
+`}
+</CodeBlock>
 
+## Getting started 🚀
+
+<CodeBlock language="bash">
+{`
+npx create-react-app composion-example
+cd composion-example
+yarn add composion @emotion/styled @emotion/react
+`}
+</CodeBlock>
+
+To go further, see the [Getting Started Guide](https://neokeld.github.io/composion/index.html?path=/story/components-getting-started--page)
 
 ## Inspirations
 

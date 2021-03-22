@@ -37,6 +37,7 @@
     "@storybook/theming": "^6.1.21",
     "babel-loader": "^8.1.0",
     "emotion-theming": "^11.0.0",
+    "prism-react-renderer": "^1.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rollup": "^2.42.1",
