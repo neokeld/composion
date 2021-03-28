@@ -3,9 +3,16 @@ import { select } from '@storybook/addon-knobs';
 import decorators from '../../.storybook/utils';
 import { Button } from './';
 
+import mdx from './Button.mdx';
+
 export default {
   title: 'Components/Button',
   decorators,
+  parameters: {
+    docs: { 
+      page: mdx
+    }
+  },
 };
 
 const colorValues = ["red", "#003061", "rgb(40, 41, 54)"];

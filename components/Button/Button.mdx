@@ -1,0 +1,101 @@
+import CodeBlock from '../../.storybook/CodeBlock';
+
+# Button
+
+A flexible Button component.
+
+## background
+
+Background of the Button.
+
+Defaults to `'transparent'`.
+
+## border
+
+Border of the Button.
+
+Defaults to `'1px solid'`.
+
+## borderRadius
+
+This CSS property defines the radius of the element's corners. This property can have from one to four values:
+* 4 values: `<top-left corner> <top-right corner> <bottom-right corner> <bottom-left corner>`
+* 3 values: `<top-left corner> <top-right and bottom-left corners> <bottom-right corner>`
+* 2 values: `<top-left and bottom-right corners> <top-right and bottom-left corners>`
+* 1 value: `<all four corners>`
+
+## boxShadow
+
+This is the CSS box-shadow property. It attaches one or more shadows to an element.
+
+It has this structure:
+* `<h-offset> <v-offset> <blur> <spread> <color>`
+
+`<h-offset>` is required. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box.
+
+`<v-offset>` is required. A positive value puts the shadow below the box, a negative value puts the shadow above the box.
+
+`<blur>` is optional. The blur radius. The higher the number, the more blurred the shadow will be.
+
+`<spread>` is optional. A positive value increases the size of the shadow, a negative value decreases the size of the shadow.
+
+`<color>` is optional. The color of the shadow. The default value is the text color.
+
+## color
+
+The color of the text in the Button.
+
+## disabled
+
+A boolean. If it is true, set the opacity to 0.7 and disable the hover effect.
+
+## fontFamily
+
+The font family of the text of the Button.
+
+## fontSize
+
+The size of the font of the Button.
+
+## fontWeight
+
+The weight of the font of the Button. Defaults to 500.
+
+## opacity
+
+The opacity of the Button. If the Button is disabled, defaults to 0.7.
+
+## padding
+
+Sets the space between the content of the Button and its border.
+
+## hover
+
+This corresponds to the `:hover` CSS pseudo-class. It has no effect if the Button is disabled.
+
+Example:
+
+<CodeBlock language="js">
+{`
+{
+    color: "white",
+    background: select('color', colorValues, "red")
+}
+`}
+</CodeBlock>
+
+## after
+
+This corresponds to the `::after` CSS pseudo-class.
+
+## hoverAfter
+
+This corresponds to the `:hover::after` CSS pseudo-class.
+
+## before
+
+This corresponds to the `::before` CSS pseudo-class.
+
+## hoverBefore
+
+This corresponds to the `:hover::before` CSS pseudo-class.

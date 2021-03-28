@@ -4,9 +4,16 @@ import decorators from '../../.storybook/utils';
 import { Card, CardAnchor, CardTitleContent } from './Card';
 import { Box } from '../Box';
 
+import mdx from './Card.mdx';
+
 export default {
     title: 'Components/Card',
     decorators,
+    parameters: {
+        docs: { 
+          page: mdx
+        }
+    },
 };
 
 export const defaultCard = () => {

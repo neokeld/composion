@@ -5,9 +5,16 @@ import styled from '@emotion/styled';
 import decorators from '../../.storybook/utils';
 import { Box } from './';
 
+import mdx from './Box.mdx';
+
 export default {
   title: 'Components/Box',
   decorators,
+  parameters: {
+    docs: { 
+      page: mdx
+    }
+  },
 };
 
 const colorValues = ["#eaeaea", "#ea00ea", "#00eaea"];

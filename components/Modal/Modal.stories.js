@@ -7,9 +7,16 @@ import { Box } from '../Box';
 import { modalProps, ModalContent } from './ModalContent';
 import { Modal } from './Modal';
 
+import mdx from './Modal.mdx';
+
 export default {
     title: 'Components/Modal',
     decorators,
+    parameters: {
+        docs: { 
+          page: mdx
+        }
+    },
 };
 
 export const modal = () => {

@@ -1,0 +1,167 @@
+import CodeBlock from '../../.storybook/CodeBlock';
+
+# Box
+
+The core building block of Composion and of your application.
+
+## alignItems
+
+Flex items in the Box can be aligned in the cross axis of the current line of the flex container, similar to justify-content but in the perpendicular direction.
+
+Values:
+* `start`
+    * The cross-start margin edge of the item is placed flush with the cross-start edge of the line. 
+* `end`
+    * The cross-end margin edge of the item is placed flush with the cross-end edge of the line. 
+* `center`
+    * The item’s margin box is centered in the cross axis within the line. (If the cross size of the flex line is less than that of the flex item, it will overflow equally in both directions.) 
+* `baseline`
+    * The item participates in baseline alignment: all participating flex items on the line are aligned such that their baselines align, and the item with the largest distance between its baseline and its cross-start margin edge is placed flush against the cross-start edge of the line. If the item does not have a baseline in the necessary axis, then one is synthesized from the flex item’s border box. 
+* `stretch`
+    * If the cross size property of the flex item computes to auto, and neither of the cross-axis margins are auto, the flex item is stretched. Its used value is the length necessary to make the cross size of the item’s margin box as close to the same size as the line as possible, while still respecting the constraints imposed by min-height/min-width/max-height/max-width.
+
+![alignItems illustration](https://raw.githubusercontent.com/neokeld/composion/main/images/align-items.png)
+
+## background
+
+This is the same as the background shorthand CSS property. It sets all background style properties at once, such as color, image, origin and size, or repeat method.
+
+Examples:
+* `red`
+* `#e1e6ea`
+* `blue url("img.png") no-repeat fixed center`
+
+## border
+
+This is the same as the border CSS property. It is a shorthand property for:
+* border-width
+* border-style (required)
+* border-color
+
+If border-color is omitted, the color applied will be the color of the text.
+
+Examples:
+* `2px solid blue`
+* `4px dotted red`
+
+## borderRadius
+
+This CSS property defines the radius of the element's corners. This property can have from one to four values:
+* 4 values: `<top-left corner> <top-right corner> <bottom-right corner> <bottom-left corner>`
+* 3 values: `<top-left corner> <top-right and bottom-left corners> <bottom-right corner>`
+* 2 values: `<top-left and bottom-right corners> <top-right and bottom-left corners>`
+* 1 value: `<all four corners>`
+
+## boxShadow
+
+This is the CSS box-shadow property. It attaches one or more shadows to an element.
+
+It has this structure:
+* `<h-offset> <v-offset> <blur> <spread> <color>`
+
+`<h-offset>` is required. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box.
+
+`<v-offset>` is required. A positive value puts the shadow below the box, a negative value puts the shadow above the box.
+
+`<blur>` is optional. The blur radius. The higher the number, the more blurred the shadow will be.
+
+`<spread>` is optional. A positive value increases the size of the shadow, a negative value decreases the size of the shadow.
+
+`<color>` is optional. The color of the shadow. The default value is the text color.
+
+## color
+
+The color of text in the Box.
+
+## height
+
+Sets the height of the Box.
+
+## justifyContent
+
+The justifyContent props aligns flex items in the Box along the main axis of the current line of the flex container. This is done after any flexible lengths and any auto margins have been resolved. Typically it helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.
+
+Values:
+* `start`
+    * Items are packed toward the start of the line. The main-start margin edge of the first flex item on the line is placed flush with the main-start edge of the line, and each subsequent flex item is placed flush with the preceding item. 
+* `end`
+    * Items are packed toward the end of the line. The main-end margin edge of the last flex item is placed flush with the main-end edge of the line, and each preceding flex item is placed flush with the subsequent item. 
+* `center`
+    * Items are packed toward the center of the line. The flex items on the line are placed flush with each other and aligned in the center of the line, with equal amounts of space between the main-start edge of the line and the first item on the line and between the main-end edge of the line and the last item on the line. (If the leftover free-space is negative, the flex items will overflow equally in both directions.) 
+* `space-between`
+    * Items are evenly distributed in the line. If the leftover free-space is negative or there is only a single flex item on the line, this value is identical to flex-start. Otherwise, the main-start margin edge of the first flex item on the line is placed flush with the main-start edge of the line, the main-end margin edge of the last flex item on the line is placed flush with the main-end edge of the line, and the remaining flex items on the line are distributed so that the spacing between any two adjacent items is the same. 
+* `space-around`
+    * Items are evenly distributed in the line, with half-size spaces on either end. If the leftover free-space is negative or there is only a single flex item on the line, this value is identical to center. Otherwise, the flex items on the line are distributed such that the spacing between any two adjacent flex items on the line is the same, and the spacing between the first/last flex items and the flex container edges is half the size of the spacing between flex items. 
+* `space-evenly`
+    * Distribute items evenly. Items have equal space around them
+
+![justifyContent illustration](https://raw.githubusercontent.com/neokeld/composion/main/images/justify-content.png)
+
+## direction
+
+The direction props specifies how items are placed in the Box, by setting the direction of the Box’s main axis. This determines the direction in which items are laid out.
+
+Values:
+* `row`
+    * The Box’s main axis has the same orientation as the inline axis of the current writing mode. The main-start and main-end directions are equivalent to the inline-start and inline-end directions, respectively, of the current writing mode.
+* `column`
+    * The Box’s main axis has the same orientation as the block axis of the current writing mode. The main-start and main-end directions are equivalent to the block-start and block-end directions, respectively, of the current writing mode.
+
+## grow
+
+The grow props sets the flex grow factor to the provided `<number>`. Negative numbers are invalid. It determines how much the flex item will grow relative to the rest of the flex items in the flex container when positive free space is distributed. It defaults to 1.
+
+## shrink
+
+The shrink props sets the flex shrink factor to the provided `<number>`. Negative numbers are invalid. It determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed. It defaults to 1.
+
+## basis
+
+It specifies the flex basis: the initial main size of the item.
+
+Basis props accepts the same values as the width and height properties (except that auto is treated differently) plus the content keyword:
+
+* `<width>`
+    * length or percentage. Examples: `0.5em`, `32%`, `8px`.
+* `auto`
+    * When specified on a flex item, the auto keyword retrieves the value of the main size property as the used flex-basis. If that value is itself auto, then the used value is content. 
+* `content`
+    * Indicates an automatic size based on the flex item’s content. (It is typically equivalent to the max-content size, but with adjustments to handle aspect ratios, intrinsic sizing constraints, and orthogonal flows; see details in §9 Flex Layout Algorithm.)
+
+It defaults to 0.
+
+## wrap
+
+The wrap props controls whether the Box is single-line or multi-line, and the direction of the cross-axis, which determines the direction new lines are stacked in.
+
+Values:
+* `nowrap`
+    * The container is single-line. 
+* `wrap`
+    * The container is multi-line. 
+
+## margin
+
+Sets the space around the Box.
+
+## padding
+
+Sets the space between its content and its border.
+
+## width
+
+Sets the width of the Box.
+
+## focus
+
+This corresponds to the `:focus` CSS pseudo-class.
+
+Example:
+
+<CodeBlock language="js">
+{`
+{
+  boxShadow: '0 0 0 2px'
+}
+`}
+</CodeBlock>

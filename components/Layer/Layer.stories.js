@@ -4,9 +4,16 @@ import decorators from '../../.storybook/utils';
 import { Layer } from './Layer';
 import { Box } from '../Box';
 
+import mdx from './Layer.mdx';
+
 export default {
     title: 'Components/Layer',
     decorators,
+    parameters: {
+        docs: { 
+          page: mdx
+        }
+    },
 };
 
 export const defaultLayer = () => {
